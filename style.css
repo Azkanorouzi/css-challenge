@@ -1,0 +1,258 @@
+/* defaults */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 1rem;
+   font-family: 'Poppins', sans-serif;
+}
+body {
+ background: white;
+ color: hsl(234, 12%, 34%);
+}
+.des{
+ font-weight: 200;
+ color:hsl(229, 6%, 66%) ;
+}
+/* defaults end */
+
+/* heading start */
+.heading{
+ text-align: center;
+   padding: 25px;
+  padding-top: 70px;
+}
+.heading-header , .heading-header span{
+ font-size: 24px;
+  font-weight: 200;
+}
+.heading-header span{
+ color: hsl(229, 6%, 66%);
+}
+.heading-header{
+ font-weight: 700;
+}
+.heading .heading2{
+margin-top: 10px;
+font-weight: 400;
+color:hsl(229, 6%, 66%);
+}
+/* heading end */
+
+/* cards */
+.cards div{
+  background-color: rgb(241, 240, 240);
+ margin: 30px;
+ padding: 25px;
+ height: 40vh;
+ border-top-right-radius: 5px;
+ border-top-left-radius: 5px;
+ box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.39);
+}
+.sup{
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+.team{
+ border-top: 5px solid hsl(0, 78%, 62%);
+}
+.karma{
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+.cal{
+ border-top: 5px solid hsl(212, 86%, 64%);
+}
+/* cards end */
+
+/* icons */
+.icon{
+ position: absolute;
+ right: 50px;
+}
+.team .des{
+ font-size: 12px;
+}
+.cal .des{
+ font-size: 12px;
+}
+/* footer */
+footer{
+background-color:hsl(234, 12%, 34%) ;
+color: aquamarine;
+display: flex;
+justify-content: center;
+}
+footer a{
+ text-decoration: none;
+ color:white;
+ text-align: center;
+ transition: .5s color;
+}
+footer a:hover{
+ color:aqua ;
+}
+/* cards hover effects */
+.cards .sup:hover{
+box-shadow: 0px 0px 4px 2px hsl(180, 62%, 55%);
+}
+.sup{
+  transition: .5s box-shadow;
+}
+.cards .team:hover{
+box-shadow: 0px 0px 4px 2px hsl(0, 78%, 62%);
+}
+.team{
+  transition: .5s box-shadow;
+}
+.cards .karma:hover{
+box-shadow: 0px 0px 4px 2px hsl(34, 97%, 64%);
+}
+.karma{
+  transition: .5s box-shadow;
+}
+.cards .cal:hover{
+box-shadow: 0px 0px 4px 1px hsl(212, 86%, 64%);
+}
+.cal{
+  transition: .5s box-shadow;
+}
+footer p , footer a{
+  font-size: 8px;
+}
+/* start of media queries */
+
+/* small screen devices */
+@media screen and (max-width : 197px){
+  .cards .des{
+    font-size: 10px;
+  }
+  .karma .des{
+    font-size: 10px;
+  }
+  .cards div .icon{
+    width: 40px;
+    height: 40px;
+  }
+  .cards .header{
+    font-size: 12px;
+  }
+  .sup .header{
+    position: relative;
+    right: 20px;
+  }
+  .cal .header{
+   position: relative;
+    right: 20px;
+  }
+  footer p , footer a{
+  font-size: 8px;
+}
+}
+
+@media screen and (max-height : 375px){
+.cards div .icon{
+  position: relative;
+ left: 75vw;
+ bottom: 50px;
+}
+    .cards .card{
+   margin-right: 25px;
+   margin-left: 25px;
+  }
+}
+@media screen and (max-height : 242px){
+.cards div .icon{
+  position: relative;
+ left: 75vw;
+ bottom: 60px;
+ width: 50px;
+ height: 50px;
+}
+
+}
+@media screen and (min-width : 434px){
+footer p , footer a{
+  font-size: 16px;
+}
+}
+@media screen and (min-width : 1070px){
+/* heading */
+.heading-header , .heading-header span{
+font-size: 30px;
+}
+.heading-header {
+padding-right: 35vw;
+padding-left: 35vw;
+}
+.heading2{
+  text-align: center;
+  padding-right: 30vw;
+padding-left: 30vw;
+}
+/* cards */
+.cards{
+  display: grid;
+grid-template-areas: ". . . t t t . . ."
+                      "s s s t t t c c c"
+                      "s s s k k k c c c"
+                      ". . . k k k . . .";
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+ justify-content: center;
+}
+.cards div{
+  margin: 0px;
+}
+.sup{
+  position: relative;
+
+}
+.cal{
+  position: relative;
+  left: 30px;
+}
+.sup{
+  right: 30px;
+}
+.cards{
+  margin-right: 1000px;
+}
+.cards div{
+  width: 25vw;
+}
+/* team */
+.team{
+  grid-area: t;
+}
+.sup{
+  grid-area: s;
+}
+.karma{
+  grid-area: k;
+}
+.cal{
+  grid-area: c;
+}
+
+.sup .icon{
+  position: relative;
+  top: 10vh;
+  left: 16vw;
+}
+.cal .icon{
+  position: relative;
+  top: 10vh;
+  left: 16vw;
+}
+.team .icon{
+  position: relative;
+  top: 10vh;
+  left: 16vw;
+}
+.karma .icon{
+  position: relative;
+  top: 10vh;
+  left: 16vw;
+}
+}
